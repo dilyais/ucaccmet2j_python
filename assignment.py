@@ -44,7 +44,7 @@ for station in stations:
         relative_monthly_precipitation[month] = total / total_yearly_precipitation[station]
     results_all_stations[station] = {
         "relative_yearly_precipitation": relative_yearly_precipitation[station],
-        "total_yearly_precipitation": total_yearly_precipitation,
+        "total_yearly_precipitation": total_yearly_precipitation[station],
         "relative_monthly_precipitation": relative_monthly_precipitation,
         "total_monthly_precipitation": ppt_total_per_month[station]
     }

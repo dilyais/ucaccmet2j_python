@@ -26,7 +26,18 @@ for station, months_dict in ppt_m_s.items():
     for month, values in months_dict.items():
         ppt_total_per_month[station][month] = sum(values)
 
-with open('results.json', 'w', encoding='utf-8') as f:
-    json.dump(ppt_total_per_month, f, indent=4, ensure_ascii=False)
+results_all_stations = {}
 
-print("Monthly totals saved to results.json")
+for station in stations:
+    total_yearly_precipitation = sum(ppt_total_per_month[station].values())
+    relative_monthly_precipitation = {}
+    for month, total in ppt_total_per_month[station].items():
+        relative_monthly_precipitation[month] = total / total_yearly_precipitation
+    results_all_stations[station] = {
+        "total_yearly_precipitation": total_yearly_precipitation,
+        "relative_monthly_precipitation": relative_monthly_precipitation,
+        "total_monthly_precipitation": ppt_total_per_month[station]
+    }
+
+with open('results.json', 'w', encoding='utf-8') as f:
+    json.dump(results_all_stations, f, indent=4, ensure_ascii=False)

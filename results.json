@@ -1,6 +1,12 @@
 {
     "GHCND:USW00093814": {
-        "total_yearly_precipitation": 9321,
+        "relative_yearly_precipitation": 0.2968660424230843,
+        "total_yearly_precipitation": {
+            "GHCND:USW00093814": 9321,
+            "GHCND:US1WAKG0038": 11180,
+            "GHCND:USC00513317": 5126,
+            "GHCND:US1CASD0032": 5771
+        },
         "relative_monthly_precipitation": {
             "2010-01": 0.05492972856989593,
             "2010-02": 0.06308336015448986,
@@ -31,7 +37,13 @@
         }
     },
     "GHCND:US1WAKG0038": {
-        "total_yearly_precipitation": 11180,
+        "relative_yearly_precipitation": 0.3560736352633926,
+        "total_yearly_precipitation": {
+            "GHCND:USW00093814": 9321,
+            "GHCND:US1WAKG0038": 11180,
+            "GHCND:USC00513317": 5126,
+            "GHCND:US1CASD0032": 5771
+        },
         "relative_monthly_precipitation": {
             "2010-01": 0.15143112701252237,
             "2010-02": 0.06529516994633273,
@@ -62,7 +74,13 @@
         }
     },
     "GHCND:USC00513317": {
-        "total_yearly_precipitation": 5126,
+        "relative_yearly_precipitation": 0.16325880629339448,
+        "total_yearly_precipitation": {
+            "GHCND:USW00093814": 9321,
+            "GHCND:US1WAKG0038": 11180,
+            "GHCND:USC00513317": 5126,
+            "GHCND:US1CASD0032": 5771
+        },
         "relative_monthly_precipitation": {
             "2010-01": 0.07062036675770582,
             "2010-02": 0.03921186110027312,
@@ -93,7 +111,13 @@
         }
     },
     "GHCND:US1CASD0032": {
-        "total_yearly_precipitation": 5771,
+        "relative_yearly_precipitation": 0.18380151602012867,
+        "total_yearly_precipitation": {
+            "GHCND:USW00093814": 9321,
+            "GHCND:US1WAKG0038": 11180,
+            "GHCND:USC00513317": 5126,
+            "GHCND:US1CASD0032": 5771
+        },
         "relative_monthly_precipitation": {
             "2010-01": 0.22924969675966037,
             "2010-02": 0.1478080055449662,

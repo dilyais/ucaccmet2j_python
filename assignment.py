@@ -26,14 +26,24 @@ for station, months_dict in ppt_m_s.items():
     for month, values in months_dict.items():
         ppt_total_per_month[station][month] = sum(values)
 
+total_yearly_precipitation = {}
+for station in stations:
+    total_yearly_precipitation[station] = sum(ppt_total_per_month[station].values())
+
+total_precip_all_stations = sum(total_yearly_precipitation.values())
+relative_yearly_precipitation = {}
+for station, total in total_yearly_precipitation.items():
+    relative_yearly_precipitation[station] = total / total_precip_all_stations
+
+
 results_all_stations = {}
 
 for station in stations:
-    total_yearly_precipitation = sum(ppt_total_per_month[station].values())
     relative_monthly_precipitation = {}
     for month, total in ppt_total_per_month[station].items():
-        relative_monthly_precipitation[month] = total / total_yearly_precipitation
+        relative_monthly_precipitation[month] = total / total_yearly_precipitation[station]
     results_all_stations[station] = {
+        "relative_yearly_precipitation": relative_yearly_precipitation[station],
         "total_yearly_precipitation": total_yearly_precipitation,
         "relative_monthly_precipitation": relative_monthly_precipitation,
         "total_monthly_precipitation": ppt_total_per_month[station]
